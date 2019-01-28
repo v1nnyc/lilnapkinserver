@@ -66,10 +66,16 @@ creating our lil-napkin server
   - [source](https://goaccess.io/get-started)
 
 ## Compress Textual Content
- 1. For **Apache** this is configured using mod_deflate
+ 1. For **Apache** this is configured using mod_deflate which was already set up by default
  2. For **Nginx** this is configured using  
 
 ## Obscure server identity
+ 1. For **Apache** we installed a mod to change but not remove the server header
+ 2. Change the header to something confusing
+    - [source](https://www.tecmint.com/change-apache-server-name-to-anything-in-server-headers/)
+ 3. For **Nginx** we installed nginx extras
+ 4. Then we changed the nginx config file and turned off server tokens and set the headers
+    - [source](https://stackoverflow.com/questions/246227/how-do-you-change-the-server-header-returned-by-nginx)
 
 ## Run PHP
 
