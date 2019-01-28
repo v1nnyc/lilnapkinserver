@@ -3,12 +3,14 @@ creating our lil-napkin server
 
 ## Setting up Apache and Nginx
 1. SSH into our droplet and install the servers.
+    - [nginx source](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04)
+    - [apache source](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-16-04)
 2. Set up the firewall with permission to use port 8081 and 8082.
 3. For Apache to listen on a different port, edit the config file and the ports config file
     - edit the /etc/apache2/ports.conf with Listen 8081
     - edit /etc/apache2/sites-enabled/lil-napkin.config with <VirtualHost *:8081>
 4. For Nginx to listen on 8082 edit /etc/nginx/sites-enabled/default with server { listen 8082; ...}
-  - [ngix source](https://stackoverflow.com/questions/10829402/how-to-start-nginx-via-different-portother-than-80)
+   - [nginx source](https://stackoverflow.com/questions/10829402/how-to-start-nginx-via-different-portother-than-80)
 
 ## Employ password protection
 1. Create a passwords file using the apache2-utils
@@ -16,11 +18,13 @@ creating our lil-napkin server
     `sudo htpasswd -c /etc/nginx/.htpasswd alex`
      - This creates a the file and saves the user alex and asks for the password to be used
      - Replace nginx with apache2 for the other server
-2. Create a custom sites-available file for your site's configuration for *apache*
+2. Create a custom sites-available file for your site's configuration for **Apache**
    - `vim /etc/apache2/sites-available/lil-napkin.conf`
    - `a2ensite lil-napkin.conf`
    - add lines to this for password authentication
-   - For *nginx* edit the default sites-enabled file with code for authentication
+   - For **Nginx** edit the default sites-enabled file with code for authentication
+   - [apache source](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-14-04)
+   - [nginx source](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)
    
 ## Have a static team page that indicates your name and/or team members, emails, etc.
 1. For Apache and Nginx the html file is located at `/var/www/html/index.html`
@@ -31,11 +35,18 @@ creating our lil-napkin server
 1. Write the html pages used for 404 and 403 errors which can be placed inside `/var/www/html`
 2. For Apache link these pages to be used for these errors in `/etc/apache2/sites-enabled/lil-napkin.config`
 3. For Nginx link these pages to be used for these errors in `/etc/nginx/sites-enabled/default`
+  - [source](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-to-use-custom-error-pages-on-ubuntu-14-04)
 
 ## Have a favicon
-1. Place in the head tags of the index.html and other html pages for the site
+1. Create a directory of all favicon icons
+2. Used an online favicon converter to change images to icons
+3. Linked to the directory in the head tags of the index.html and other html pages for the site
+  - [converter](https://www.favicon-generator.org/)
 
 ## Have a robots.txt file
+1. Used a robots.txt generator to create the file
+2. Put the file in the root directory
+  - [generator](http://tools.seobook.com/robots-txt/generator/)
 
 ## Deploy from Github
 1. Create a user for the server with sudo privileges and make them a directory `sudo mkdir /var/www/.ssh`
@@ -55,6 +66,8 @@ creating our lil-napkin server
   - [source](https://goaccess.io/get-started)
 
 ## Compress Textual Content
+ 1. For **Apache** this is configured using mod_deflate
+ 2. For **Nginx** this is configured using  
 
 ## Obscure server identity
 
