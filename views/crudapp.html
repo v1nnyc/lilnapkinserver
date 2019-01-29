@@ -82,7 +82,7 @@
 
     }
 
-    #movie-form>#row {
+    #movie-form>.row {
       margin: 15px;
     }
 
@@ -160,17 +160,17 @@
 
     <dialog id="dialog" style="z-index: 2;">
       <form id="movie-form">
-        <div id="row">
+        <div class="row">
           <label for="title"><b>Title:</b></label>
           <input name="title" style="width: 70%" id="title" />
           <br />
         </div>
-        <div id="row1">
+        <div class="row">
           <label for="yor"><b>Year of Release:</b></label>
           <input type="number" id="yor" name="yor" min="1900" max="2025">
           <br />
         </div>
-        <div id="row2">
+        <div class="row">
           <label for="rating"><b>Rating:</b></label>
           <select id="rating">
             <option value="G" selected>G</option>
