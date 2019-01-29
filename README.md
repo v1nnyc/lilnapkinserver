@@ -67,7 +67,7 @@ creating our lil-napkin server
 
 ## Compress Textual Content
  1. For **Apache** this is configured using mod_deflate which was already set up by default
- 2. For **Nginx** this is configured using  
+ 2. For **Nginx** this is automatically configured with gzip 
 
 ## Obscure server identity
  1. For **Apache** we installed a mod to change but not remove the server header
@@ -78,7 +78,8 @@ creating our lil-napkin server
     - [source](https://stackoverflow.com/questions/246227/how-do-you-change-the-server-header-returned-by-nginx)
 
 ## Run PHP
- 1.
+ 1.Change the config files 
+ 2.For **Apache** we downloaded an extra package to help it run
 
 ## Deliver Clean URLS
  1. For **Apache** in the file `/etc/apache2/sites-enabled/lil-napkin.config` we turned the rewrite engine on and created a rule to hide the .php
