@@ -37,8 +37,8 @@ class MovieThing {
 class PFactory {
   constructor(movieObject, type) {
     let buttonIcon = {
-      "edit": "../css/icons/pencil.png",
-      "delete": "../css/icons/trash.png"
+      "edit": "/images/icons/pencil.png",
+      "delete": "/images/icons/trash.png"
     };
 
     let buttonValues = {
