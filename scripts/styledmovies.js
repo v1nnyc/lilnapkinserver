@@ -192,7 +192,10 @@ function addMovies() {
   if (!movieList.length) {
     document.getElementById("buttons-n-such").insertBefore(
       document.createTextNode("No movies currently listed "),
-      document.getElementById("add"))
+      document.getElementById("add"));
+    document.getElementById("buttons-n-such").insertBefore(
+      document.createTextNode("No movies currently listed "),
+      document.getElementById("redirect"))
   }
   let button = document.createElement("button");
   button.onclick = addMovie;
@@ -221,6 +224,6 @@ function initializeEverything() {
   addMovies();
 }
 
-function redirectAboutUs(){
+function redirectAboutUs() {
   window.location = "/about";
 }
