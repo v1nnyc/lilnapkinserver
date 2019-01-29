@@ -78,8 +78,8 @@ creating our lil-napkin server
     - [source](https://stackoverflow.com/questions/246227/how-do-you-change-the-server-header-returned-by-nginx)
 
 ## Run PHP
- 1.Change the config files 
- 2.For **Apache** we downloaded an extra package to help it run
+ 1. Change the config files 
+ 2. For **Apache** we downloaded an extra package to help it run
 
 ## Deliver Clean URLS
  1. For **Apache** in the file `/etc/apache2/sites-enabled/lil-napkin.config` we turned the rewrite engine on and created a rule to hide the .php
