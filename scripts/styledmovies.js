@@ -197,8 +197,13 @@ function addMovies() {
   let button = document.createElement("button");
   button.onclick = addMovie;
   button.id = "add"
-  button.innerHTML = "Add Movie"
+  button.innerHTML = "Add Movie";
   document.getElementById("buttons-n-such").appendChild(button)
+  let button2 = document.createElement("button");
+  button2.onclick = redirectAboutUs;
+  button2.id = "redirect";
+  button2.innerHTML = "About Us!"
+  document.getElementById("buttons-n-such").appendChild(button2);
   for (let movieObject in movieList) {
     document.getElementById("movies-list").appendChild(new MovieThing(
       movieList[movieObject], movieObject));
@@ -216,6 +221,6 @@ function initializeEverything() {
   addMovies();
 }
 
-function reditectAboutUs(){
+function redirectAboutUs(){
   window.location = "/about";
 }
