@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="syles.css">
@@ -20,6 +21,18 @@
   <h1>Lil Napkin</h1>
   <img height="442" width="442" src="images/lil-napkin-min.jpg" alt="Lil Napkin">
   <p>let him live on forever in our hearts.</p>
+
+  <button id="crudAppBtn">Crud App</button>
+  <button id="aboutUsBtn">About Us</button>
+
+  <script type="text/javascript">
+    document.getElementById("crudAppBtn").onclick = function() {
+      window.location = "/views/crudapp.html";
+    };
+    document.getElementById("aboutUsBtn").onclick = function() {
+      window.location = "/about";
+    };
+  </script>
 </body>
 
 </html>
