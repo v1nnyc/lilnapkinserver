@@ -215,3 +215,7 @@ function initializeEverything() {
   initializeMovies();
   addMovies();
 }
+
+function reditectAboutUs(){
+  window.location = "/about";
+}
